@@ -263,6 +263,7 @@ class Dictionary(object):
 
     @staticmethod
     def _add_file_to_dictionary_single_worker(filename, tokenize, eos_word, worker_id=0, num_workers=1):
+        print(filename)
         counter = Counter()
         with open(filename, 'r', encoding='utf-8') as f:
             size = os.fstat(f.fileno()).st_size
